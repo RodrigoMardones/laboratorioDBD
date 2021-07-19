@@ -48,9 +48,25 @@ persona_rol tests
 */
 insert into persona_rol (fk_id_rol, fk_id_persona) values (1,1);
 insert into persona_rol (fk_id_rol, fk_id_persona) values (2,2);
-
+insert into persona_rol (fk_id_rol, fk_id_persona) values (3,1);
 /*
 PERSONA_COMPANIA tests
 */
 insert into PERSONA_COMPANIA (fk_id_persona, fk_id_compania, codigo_persona) values (1,1,'myclientcode123456');
 insert into PERSONA_COMPANIA (fk_id_persona, fk_id_compania, codigo_persona) values (2,2,'myclientcode223456');
+
+
+
+/*
+transacciones tests
+*/
+insert into transaccion (comprobante_url, fk_id_estado) values ('http://myvoucher.url/code/1', 1);
+insert into transaccion (comprobante_url, fk_id_estado) values (null, 2);
+insert into transaccion (comprobante_url, fk_id_estado) values ('http://myvoucher.url/code/2', 3);
+
+/*
+
+*/
+insert into intencion (id_intencion, estado, monto, creacion, modificacion, fk_id_compania, fk_id_pasarela, fk_id_servicio, fk_id_persona, fk_id_transaccion) values (1, 'paid', 5000, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 1, 1, 1, 1, 1);
+insert into intencion (id_intencion, estado, monto, creacion, modificacion, fk_id_compania, fk_id_pasarela, fk_id_servicio, fk_id_persona, fk_id_transaccion) values (3, 'refunded', 5000, CURRENT_TIMESTAMP, '2021-07-19', 2, 3, 1, 2, 3);
+insert into intencion (id_intencion, estado, monto, creacion, modificacion, fk_id_compania, fk_id_pasarela, fk_id_servicio, fk_id_persona, fk_id_transaccion) values (2, 'rejected', 5000, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 1, 1, 1, 2, 2);
