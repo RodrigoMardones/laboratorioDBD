@@ -36,3 +36,21 @@ insert into pasarela (url_pago, nombre, activo) values ('http://test.url', 'U-PA
 insert into pasarela (url_pago, nombre, activo) values ('http://test.url', 'FPAY', true);
 insert into pasarela (url_pago, nombre, activo) values ('http://test.url', 'TRANSBANK', true);
 
+
+/*
+personas tests
+*/
+insert into persona (nombre, apellido_materno, apellido_paterno, dni, password) values ('John', 'Doe', 'Knou', '11111111-1','myencriptedpsswrd');
+insert into persona (nombre, apellido_materno, apellido_paterno, dni, password) values ('Jane', 'Doe', 'Knou', '11111112-1','myencriptedpsswrd2');
+
+/*
+persona_rol tests
+*/
+insert into persona_rol (fk_id_rol, fk_id_persona) values (1,1);
+insert into persona_rol (fk_id_rol, fk_id_persona) values (2,2);
+
+/*
+PERSONA_COMPANIA tests
+*/
+insert into PERSONA_COMPANIA (fk_id_persona, fk_id_compania, codigo_persona) values (1,1,'myclientcode123456');
+insert into PERSONA_COMPANIA (fk_id_persona, fk_id_compania, codigo_persona) values (2,2,'myclientcode223456');
