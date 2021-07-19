@@ -18,3 +18,21 @@ estado tests
 insert into ESTADO (codigo_estado, mensaje_estado) values (1000, 'transaccion pagada');
 insert into ESTADO (codigo_estado, mensaje_estado) values (1001, 'transaccion rechazada');
 insert into ESTADO (codigo_estado, mensaje_estado) values (1002, 'transaccion reembolsada');
+
+
+/*
+servicios tets
+*/
+insert into servicio (nombre) values ('telefono hogar');
+insert into servicio (nombre) values ('agua potable hogar');
+insert into servicio (nombre) values ('television cable hogar');
+insert into servicio (nombre) values ('internet hogar');
+
+
+/*
+pasarelas tests
+*/
+insert into pasarela (url_pago, nombre, activo) values ('http://test.url', 'U-PAY', true);
+insert into pasarela (url_pago, nombre, activo) values ('http://test.url', 'FPAY', true);
+insert into pasarela (url_pago, nombre, activo) values ('http://test.url', 'TRANSBANK', true);
+
